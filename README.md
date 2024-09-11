@@ -32,3 +32,4 @@ With the [KMP plugin for Android Studio](https://plugins.jetbrains.com/plugin/14
   * [Material Design 3](https://m3.material.io/) - application design system providing UI components
 * Di
   * [Koin](https://insert-koin.io/) - dependency injection library for Android that reduces the boilerplate of doing manual dependency injection in project
+/
