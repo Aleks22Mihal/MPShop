@@ -4,8 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.isSystemInDarkTheme
 import com.arkivanov.decompose.retainedComponent
-import mpshop.app.presentation.navigation.DefaultRootComponent
+import com.arkivanov.essenty.backhandler.BackDispatcher
+import mpshop.app.presentation.navigation.rootNavigation.DefaultRootComponent
 
 class MainActivity : ComponentActivity() {
 
@@ -16,11 +18,16 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val rootComponent = retainedComponent { componentContext ->
-            DefaultRootComponent(componentContext)
+
+            DefaultRootComponent(componentContext = componentContext)
         }
 
         setContent {
-            App(rootComponent = rootComponent)
+            App(
+                rootComponent = rootComponent,
+                darkTheme = isSystemInDarkTheme(),
+                dynamicColor = false,
+            )
         }
     }
 }

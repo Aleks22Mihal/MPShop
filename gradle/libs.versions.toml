@@ -3,14 +3,26 @@ agp = "8.5.2"
 android-compileSdk = "34"
 android-minSdk = "24"
 android-targetSdk = "34"
-androidx-activityCompose = "1.9.1"
+
+androidx-activityCompose = "1.9.2"
 androidx-lifecycle = "2.8.0"
-compose-plugin = "1.6.10"
-extensionsComposeJetbrains = "2.2.3"
+compose-plugin = "1.6.11"
+
 decompose = "3.1.0"
-koinAndroid = "3.1.4"
-kotlin = "2.0.0"
+
+kotlin = "2.0.20"
+
 kotlinxSerializationJson = "1.7.1"
+
+kamel = "0.9.5"
+
+ktor = "2.3.12"
+
+koin = "3.6.0-Beta4"
+koinCompose = "3.6.0-Beta4"
+koinComposeMultiplatform = "1.2.0-Beta4"
+
+lifecycleCoroutines = "2.1.0"
 
 [libraries]
 
@@ -19,13 +31,29 @@ androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", nam
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 
 decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
-decompose-jetbrains = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "extensionsComposeJetbrains" }
 decompose-extensions-compose = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "decompose" }
 
-koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
-koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinAndroid" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCompose" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinComposeMultiplatform" }
+
+koin-composeVM = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koinComposeMultiplatform" }
 
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+
+kamel = { module = "media.kamel:kamel-image", version.ref = "kamel" }
+
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-json = { group = "io.ktor", name = "ktor-client-json", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serialization", version.ref = "ktor" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+lifecycle-coroutines = { module = "com.arkivanov.essenty:lifecycle-coroutines", version.ref = "lifecycleCoroutines" }
 
 [plugins]
 

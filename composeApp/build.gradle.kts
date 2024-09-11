@@ -36,6 +36,10 @@ kotlin {
             implementation(libs.decompose)
 
             implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
+
+            implementation(libs.ktor.client.okhttp)
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -50,14 +54,25 @@ kotlin {
 
             implementation(libs.decompose)
             implementation(libs.decompose.extensions.compose)
-            implementation(libs.decompose.jetbrains)
+            implementation (libs.lifecycle.coroutines)
 
-            implementation(libs.koin.core)
-
+            api(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.composeVM)
 
             implementation(libs.kotlinx.serialization.json)
 
+            implementation(libs.kamel)
 
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.ktor.client.logging)
+            implementation(libs.ktor.client.serialization)
+            implementation(libs.ktor.client.json)
+        }
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
@@ -98,4 +113,6 @@ android {
         debugImplementation(compose.uiTooling)
     }
 }
+
+
 
